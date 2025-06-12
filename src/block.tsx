@@ -1,13 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import MemoryGame from './components/MemoryGame';
+import './styles/game.css';
 
 interface BlockProps {
+  title?: string;
+  description?: string;
 }
 
-const Block: React.FC<BlockProps> = ({}) => {
-  
+const Block: React.FC<BlockProps> = ({ 
+  title = "Bug Memory Game", 
+  description = "A fun 2D memory card game featuring different bugs" 
+}) => {
   return (
-    <div>
-      Hello Block!
+    <div className="bug-memory-game-block">
+      <MemoryGame />
     </div>
   );
 };
